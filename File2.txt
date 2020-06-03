@@ -1,0 +1,5 @@
+The convention adopted by the git developers is to format one patch per e-mail message. The subject of the message then has the first line of the git commit, prefixed with a prefix that can be overridden on the command line but which defaults to [PATCH x/y] as a means of threading them together. (Amongst other reasons, this is why the initial line of a Git commit message is suggested to be relatively short, so that it fits with a mail client's view of the subject and suggested prefix.)
+
+Generating and sending patches
+
+How do we generate these patches? The git format-patch will generate a patch-file-per-commit in the range required, formatted ready to go as mail messages in mbox format. The --to can be specified for which mail address the patches should be sent to – but the sending is done separately.

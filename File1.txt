@@ -1,0 +1,7 @@
+One of the main benefits of a distributed version control system is that code changes can be pushed from one repository to another clone, and all dependent changes are pushed as well. However, that only works when you have write access to the remote repository, which in many cases you do not. One way of getting changes is by providing a patch, or a set of changes which can be applied to a remote repository at the other end.
+
+Git started life as a distributed version control system for the Linux project, which actively uses mail lists both as a discussion mechanism and also as a distribution mechanism for patches (changes) for an existing codebase. (New features are just a special case of patching nothing to add the new code.)
+
+To speed the processing of patches by mail, git developed tight integration with both (command-line) mail clients and of the generic Unix mbox format. Patches can be generated in the form of mail messages, and the remote end can process them with a specific command to reconstitute the changes in the git repository.
+
+Whilst the majority of projects don't use patches by mail as a change distribution mechanism, it is useful on occasion where either a patch needs to be generated and attached to a bug tracking system, or where changes need to be sent to a remote developer who doesn't have direct access (such as through a firewall).
